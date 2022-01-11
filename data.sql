@@ -17,3 +17,11 @@ VALUES
   (8, 'Angemon', '2005-06-12', 1, true, 45),
   (9, 'Boarmon', '2005-06-07', 7, true, 20.4),
   (10, 'Blossom', '1998-10-13', 3, true, 17);
+
+/* Inside a transaction update the animals table by setting the species column to unspecified. Verify that change was made. Then roll back the change and verify that species columns went back to the state before transaction. */
+
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
