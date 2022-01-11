@@ -48,3 +48,7 @@ COMMIT;
 BEGIN;
 DELETE FROM animals;
 ROLLBACK;
+
+/* After the roll back verify if all records in the animals table still exist.  */
+
+SELECT * FROM animals;
