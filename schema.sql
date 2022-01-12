@@ -10,6 +10,4 @@ CREATE TABLE animals (
     PRIMARY KEY (id)
 );
 
-/* Add column species to the table */
-
 ALTER TABLE animals ADD COLUMN species TEXT;
