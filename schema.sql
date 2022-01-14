@@ -38,8 +38,23 @@ ALTER TABLE animals ADD CONSTRAINT r_owners FOREIGN KEY (owner_id) REFERENCES ow
 
 CREATE TABLE vets (
     id SERIAL,
-    name text NOT NULL,
-    age integer NOT NULL,
-    date_of_graduation date NOT NULL,
+    name TEXT NOT NULL,
+    age INT NOT NULL,
+    date_of_graduation DATE NOT NULL,
     PRIMARY KEY (id)
+);
+
+CREATE TABLE specializations (
+  id SERIAL,
+  species_id INT,
+  vets_id INT,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE visits (
+    id SERIAL,
+    animals_id INT,
+    vets_id INT,
+    visit_date DATE NOT NULL,
+    PRIMARY KEY(id)
 );
