@@ -38,3 +38,11 @@ SELECT animals.name AS animal, visit_date FROM visits JOIN vets ON visits.vets_i
 SELECT animals.name AS animal_name, animals.date_of_birth AS animal_date_of_birth, animals.escape_attempts, animals.neutered, animals.weight_kg, species.name AS specie, owners.full_name AS animals_owner, vets.name AS vet_name, vets.age AS vet_age, visit_date FROM visits JOIN vets ON visits.vets_id = vets.id JOIN animals ON visits.animals_id = animals.id JOIN species ON animals.species_id = species.id JOIN owners ON animals.owner_id = owners.id ORDER BY visit_date DESC LIMIT 1;
 SELECT COUNT(*) AS visits_count FROM visits JOIN vets ON visits.vets_id = vets.id JOIN animals ON visits.animals_id = animals.id JOIN species ON animals.species_id = species.id WHERE vets.id NOT IN (SELECT specializations.vets_id FROM specializations JOIN species ON specializations.species_id = species.id);
 SELECT species.name AS most_requested_specie FROM visits JOIN vets ON visits.vets_id = vets.id JOIN animals ON visits.animals_id = animals.id JOIN species ON animals.species_id = species.id WHERE vets.id NOT IN (SELECT specializations.vets_id FROM specializations JOIN species ON specializations.species_id = species.id) GROUP BY species.name ORDER BY COUNT(*) DESC LIMIT 1;
+
+CREATE INDEX animals_id_asc on visits (animals_id asc);
+CREATE INDEX visits_asc ON visits (vets_id ASC, id, animals_id, visit_date);
+CREATE INDEX email_asc ON owners (email ASC, id, full_name, age);
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
