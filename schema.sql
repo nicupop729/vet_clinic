@@ -60,11 +60,3 @@ CREATE TABLE visits (
 );
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
-
-ALTER TABLE "visits" ADD FOREIGN KEY ("vets_id") REFERENCES "vets" ("id");
-
-ALTER TABLE "specializations" ADD FOREIGN KEY ("vets_id") REFERENCES "vets" ("id");
-
-ALTER TABLE "specializations" ADD FOREIGN KEY ("species_id") REFERENCES "species" ("id");
-
-ALTER TABLE "visits" ADD FOREIGN KEY ("animals_id") REFERENCES "animals" ("id");
