@@ -3,6 +3,7 @@
 > This template should be used for database related projects at Microverse.
 > Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
 
+![screenshot](./schema-diagram.png)
 
 ## Getting Started
 
@@ -20,6 +21,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@nicupop729](https://github.com/nicupop729)
 - Twitter: [@nicupop729](https://twitter.com/nicupop729)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nicolae-pop/)
+
+👤 **Michael**
+
+- GitHub: [@micheaol](https://github.com/micheaol)
+- Twitter: [@micheaol](https://twitter.com/micheaol)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/micheaol)
 
 ## 🤝 Contributing
 
