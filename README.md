@@ -22,12 +22,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@nicupop729](https://twitter.com/nicupop729)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nicolae-pop/)
 
-👤 **Michael**
-
-- GitHub: [@micheaol](https://github.com/micheaol)
-- Twitter: [@micheaol](https://twitter.com/micheaol)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/micheaol)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
