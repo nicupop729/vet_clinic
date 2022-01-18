@@ -61,6 +61,13 @@ CREATE TABLE medical_history_treatments (
     FOREIGN KEY (treatment_id) REFERENCES treatments (id)
 );
 
+CREATE INDEX medical_histories_asc ON medical_histories (patient_id ASC);
+CREATE INDEX invoice_items_asc ON invoice_items (invoice_id ASC);
+CREATE INDEX invoice_items_asc ON invoice_items (treatment_id ASC);
+CREATE INDEX invoices_asc ON invoices (medical_history_id ASC);
+CREATE INDEX medical_history_treatments_asc ON medical_history_treatments (medical_history_id ASC);
+CREATE INDEX medical_history_treatments_asc ON medical_histories (treatment_id ASC);
+
 SELECT * FROM medical_histories
 INNER JOIN medical_history_treatments
 ON medical_histories.id = medical_history_treatments.medical_history_id
